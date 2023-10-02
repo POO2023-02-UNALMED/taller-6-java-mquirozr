@@ -8,7 +8,7 @@
       "output": "",
       "comparison": "exact",
       "timeout": 10,
-      "points": 20
+      "points": null
     },
     {
       "name": "Test funcionalidades",
@@ -18,7 +18,7 @@
       "output": "",
       "comparison": "exact",
       "timeout": 10,
-      "points": 20
+      "points": null
     },
     {
       "name": "Test constructores",
@@ -28,7 +28,7 @@
       "output": "",
       "comparison": "exact",
       "timeout": 10,
-      "points": 10
+      "points": null
     }
   ]
 }
