@@ -99,6 +99,10 @@ public class Vehiculo {
     public static int getCantidadVehiculos() {
         return cantidadVehiculos;
     }
+    
+    public void setCantidadVehiculos(int cantidadVehiculos) {
+        this.cantidadVehiculos = cantidadVehiculos ;
+    }
 
     public static String vehiculosPorTipo() {
         int cantidadAutomoviles = 0;
