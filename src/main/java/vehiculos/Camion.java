@@ -1,5 +1,7 @@
 package vehiculo;
 
+import vehiculo.Vehiculo;
+
 public class Camion extends Vehiculo {
     private int ejes;
 

@@ -1,5 +1,7 @@
 package vehiculo;
 
+import vehiculo.Pais;
+
 public class Fabricante {
 	
 	private String nombre;

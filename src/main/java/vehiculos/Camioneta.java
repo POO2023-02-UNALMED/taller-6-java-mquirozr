@@ -1,5 +1,7 @@
 package vehiculo;
 
+import vehiculo.Vehiculo;
+
 public class Camioneta extends Vehiculo {
     private boolean volco;
 

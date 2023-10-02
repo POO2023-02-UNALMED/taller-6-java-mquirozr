@@ -1,5 +1,7 @@
 package vehiculo;
 
+import vehiculo.Vehiculo;
+
 public class Automovil extends Vehiculo {
     private int puestos;
 
