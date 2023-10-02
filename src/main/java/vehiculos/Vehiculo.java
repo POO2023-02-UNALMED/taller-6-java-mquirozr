@@ -1,9 +1,6 @@
 package vehiculo;
 
 public class Vehiculo {
-	
-	import java.util.List;
-	import java.util.Map;
 
 	private String placa;
     private int puertas;
