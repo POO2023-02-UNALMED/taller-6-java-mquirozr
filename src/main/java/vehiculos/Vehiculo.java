@@ -124,8 +124,27 @@ public class Vehiculo {
 
         return "Automoviles: " + cantidadAutomoviles + "\nCamionetas: " + cantidadCamionetas + "\nCamiones: " + cantidadCamiones;
     }
-
     
+    public static String paisMasVendedor() {
+        Map<String, Integer> ventasPorPais = new HashMap<>();
+
+        for (Vehiculo vehiculo : vehiculos) {
+            String paisFabricante = vehiculo.getFabricante().getPais().getNombre();
+            ventasPorPais.put(paisFabricante, ventasPorPais.getOrDefault(paisFabricante, 0) + 1);
+        }
+
+        String paisMasVendedor = "";
+        int maxVentas = 0;
+
+        for (Map.Entry<String, Integer> entry : ventasPorPais.entrySet()) {
+            if (entry.getValue() > maxVentas) {
+                maxVentas = entry.getValue();
+                paisMasVendedor = entry.getKey();
+            }
+        }
+
+        return paisMasVendedor;
+    }
 
     public static String fabricaMayorVentas() {
         Map<String, Integer> ventasPorFabricante = new HashMap<>();
