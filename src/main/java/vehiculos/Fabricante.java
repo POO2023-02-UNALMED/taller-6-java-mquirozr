@@ -1,6 +1,6 @@
-package vehiculo;
+package vehiculos;
 
-import vehiculo.Pais;
+import vehiculos.Pais;
 
 public class Fabricante {
 	

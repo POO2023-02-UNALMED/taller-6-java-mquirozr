@@ -1,6 +1,6 @@
-package vehiculo;
+package vehiculos;
 
-import vehiculo.Vehiculo;
+import vehiculos.Vehiculo;
 
 public class Camion extends Vehiculo {
     private int ejes;

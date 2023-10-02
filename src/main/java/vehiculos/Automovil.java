@@ -1,6 +1,6 @@
-package vehiculo;
+package vehiculos;
 
-import vehiculo.Vehiculo;
+import vehiculos.Vehiculo;
 
 public class Automovil extends Vehiculo {
     private int puestos;
