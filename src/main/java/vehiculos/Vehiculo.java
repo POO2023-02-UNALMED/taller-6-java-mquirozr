@@ -100,7 +100,7 @@ public class Vehiculo {
         return cantidadVehiculos;
     }
     
-    public void setCantidadVehiculos(int cantidadVehiculos) {
+    public static void setCantidadVehiculos(int cantidadVehiculos) {
         this.cantidadVehiculos = cantidadVehiculos ;
     }
 
