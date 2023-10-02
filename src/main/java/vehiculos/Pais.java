@@ -9,11 +9,9 @@ import java.util.Map;
 public class Pais {
 
 	private String nombre;
-	private List<Vehiculo> vehiculos;
 
-    public Pais(String nombre, List<test.vehiculos.Vehiculo> vehiculos) {
+    public Pais(String nombre) {
         this.nombre = nombre;
-        this.vehiculos = vehiculos;
     }
 
     public String getNombre() {
