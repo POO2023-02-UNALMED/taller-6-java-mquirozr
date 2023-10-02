@@ -1,5 +1,7 @@
 package vehiculo;
 
+import java.util.ArrayList;
+
 public class Vehiculo {
 
 	private String placa;
@@ -11,6 +13,7 @@ public class Vehiculo {
     private String traccion;
     private Fabricante fabricante;
     private static int cantidadVehiculos = 0;
+    static ArrayList<vehiculo> vehiculos;
 
     public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, double precio, double peso, String traccion, Fabricante fabricante) {
         this.placa = placa;
@@ -22,6 +25,9 @@ public class Vehiculo {
         this.traccion = traccion;
         this.fabricante = fabricante;
         cantidadVehiculos++;
+        
+        vehiculos.add(this);
+        
     }
 
     public String getPlaca() {
@@ -96,6 +102,7 @@ public class Vehiculo {
         int cantidadAutomoviles = 0;
         int cantidadCamionetas = 0;
         int cantidadCamiones = 0;
+
         for (Vehiculo vehiculo : vehiculos) {
             if (vehiculo instanceof Automovil) {
                 cantidadAutomoviles++;
@@ -108,7 +115,7 @@ public class Vehiculo {
 
         return "Automoviles: " + cantidadAutomoviles + "\nCamionetas: " + cantidadCamionetas + "\nCamiones: " + cantidadCamiones;
     }
-    
+
     public static String paisMasVendedor() {
         Map<String, Integer> ventasPorPais = new HashMap<>();
 
