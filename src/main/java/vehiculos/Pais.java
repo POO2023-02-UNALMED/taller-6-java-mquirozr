@@ -34,7 +34,6 @@ public class Pais {
         for (Map.Entry<String, Integer> entry : ventas.entrySet()) {
             if (entry.getValue() > maxVentas) {
                 maxVentas = entry.getValue();
-                // Busca la instancia de Pais correspondiente al nombre del país en el mapa
                 for (Pais pais : listaDePaises) {
                     if (pais.getNombre().equals(entry.getKey())) {
                         paisMasVendedor = pais;
