@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Pais {
     private String nombre;
-    private static Map<Vehiculo, Integer> ventas = new HashMap<>(); // Atributo estático para registrar las ventas
+    private static Map<String, Integer> ventas = new HashMap<>();
 
     public Pais(String nombre) {
         this.nombre = nombre;
@@ -22,20 +22,19 @@ public class Pais {
         this.nombre = nombre;
     }
 
-    // Método para registrar una venta de un vehículo en el país
-    public void registrarVenta(Vehiculo vehiculo) {
-        ventas.put(vehiculo, ventas.getOrDefault(vehiculo, 0) + 1);
+    public void registrarVenta() {
+        ventas.put(nombre, ventas.getOrDefault(nombre, 0) + 1);
     }
-
-    // Método para obtener el país que más vehículos ha vendido
+    
+    
     public static String paisMasVendedor() {
         int maxVentas = 0;
         String paisMasVendedor = "";
 
-        for (Map.Entry<Vehiculo, Integer> entry : ventas.entrySet()) {
+        for (Map.Entry<String, Integer> entry : ventas.entrySet()) {
             if (entry.getValue() > maxVentas) {
                 maxVentas = entry.getValue();
-                paisMasVendedor = entry.getKey().getFabricante().getPais().getNombre();
+                paisMasVendedor = entry.getKey();
             }
         }
 
