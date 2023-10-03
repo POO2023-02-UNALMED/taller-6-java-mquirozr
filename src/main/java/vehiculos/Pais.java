@@ -27,19 +27,26 @@ public class Pais {
     }
     
     
-    public static String paisMasVendedor() {
+    public static Pais paisMasVendedor() {
         int maxVentas = 0;
-        String paisMasVendedor = "";
+        Pais paisMasVendedor = null;
 
         for (Map.Entry<String, Integer> entry : ventas.entrySet()) {
             if (entry.getValue() > maxVentas) {
                 maxVentas = entry.getValue();
-                paisMasVendedor = entry.getKey();
+                // Busca la instancia de Pais correspondiente al nombre del país en el mapa
+                for (Pais pais : listaDePaises) {
+                    if (pais.getNombre().equals(entry.getKey())) {
+                        paisMasVendedor = pais;
+                        break;
+                    }
+                }
             }
         }
 
         return paisMasVendedor;
     }
+
 }
 
 
