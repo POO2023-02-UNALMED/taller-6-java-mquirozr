@@ -6,7 +6,7 @@ import java.util.Map;
 public class Fabricante {
     private String nombre;
     private Pais pais;
-    private Map<Fabricante, Integer> ventasPorFabricante = new HashMap<>();
+    private static Map<Fabricante, Integer> ventasPorFabricante = new HashMap<>();
 
     public Fabricante(String nombre, Pais pais) {
         this.nombre = nombre;
