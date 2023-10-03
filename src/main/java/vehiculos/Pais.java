@@ -8,7 +8,7 @@ import java.util.Map;
 
 public class Pais {
     private String nombre;
-    private static Map<String, Integer> ventas = new HashMap<>();
+    private static Map<Pais, Integer> ventas = new HashMap<>();
 
     public Pais(String nombre) {
         this.nombre = nombre;
@@ -23,31 +23,23 @@ public class Pais {
     }
 
     public void registrarVenta() {
-        ventas.put(nombre, ventas.getOrDefault(nombre, 0) + 1);
+        ventas.put(this, ventas.getOrDefault(this, 0) + 1); 
     }
-    
-    
+
     public static Pais paisMasVendedor() {
         int maxVentas = 0;
         Pais paisMasVendedor = null;
 
-        for (Map.Entry<String, Integer> entry : ventas.entrySet()) {
+        for (Map.Entry<Pais, Integer> entry : ventas.entrySet()) {
             if (entry.getValue() > maxVentas) {
                 maxVentas = entry.getValue();
-                for (Pais pais : listaDePaises) {
-                    if (pais.getNombre().equals(entry.getKey())) {
-                        paisMasVendedor = pais;
-                        break;
-                    }
-                }
+                paisMasVendedor = entry.getKey();
             }
         }
 
         return paisMasVendedor;
     }
-
 }
-
 
 /*package vehiculos;
 
