@@ -30,7 +30,7 @@ public class Vehiculo {
         this.fabricante = fabricante;
         cantidadVehiculos++;
         
-        this.fabricante.getPais().registrarVenta(this);
+        this.fabricante.getPais().registrarVenta();
         vehiculos.add(this);
         
     }
