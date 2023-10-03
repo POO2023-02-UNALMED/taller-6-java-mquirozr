@@ -16,8 +16,8 @@ public class Vehiculo {
     private Fabricante fabricante;
     private static int cantidadVehiculos = 0;
     
+    private static ArrayList<Vehiculo> vehiculos = new ArrayList<>();
 
-	private static ArrayList<Vehiculo> vehiculos;
 
     public Vehiculo(String placa, int puertas, int velocidadMaxima, String nombre, double precio, double peso, String traccion, Fabricante fabricante) {
         this.placa = placa;
@@ -125,26 +125,6 @@ public class Vehiculo {
         return "Automoviles: " + cantidadAutomoviles + "\nCamionetas: " + cantidadCamionetas + "\nCamiones: " + cantidadCamiones;
     }
     
-    /*public static String paisMasVendedor() {
-        Map<String, Integer> ventasPorPais = new HashMap<>();
-
-        for (Vehiculo vehiculo : vehiculos) {
-            String paisFabricante = vehiculo.getFabricante().getPais().getNombre();
-            ventasPorPais.put(paisFabricante, ventasPorPais.getOrDefault(paisFabricante, 0) + 1);
-        }
-
-        String paisMasVendedor = "";
-        int maxVentas = 0;
-
-        for (Map.Entry<String, Integer> entry : ventasPorPais.entrySet()) {
-            if (entry.getValue() > maxVentas) {
-                maxVentas = entry.getValue();
-                paisMasVendedor = entry.getKey();
-            }
-        }
-
-        return paisMasVendedor;
-    }*/
     
     public static String paisMasVendedor() {
         Map<String, Integer> ventasPorPais = new HashMap<>();
